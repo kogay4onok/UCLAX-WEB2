@@ -17,16 +17,61 @@
 			/*-------------------------------------
 			| Review
 			-------------------------------------*/
+			// var myVar = 'contains a reference to a value';
+			// var myStr = "Another can't string";
+			// var myStr = 'Another can\'t string';
+			// var myNum = 123;
+			// var myNum2 = 200.12;
+
+			// console.log(myVar + myStr);
+			// console.log(myStr + myNum);
+			// console.log(myNum2 + myNum);
+			// console.log(myNum2 - myNum);
+			// console.log(myNum2 * myNum);
+			// console.log(myNum2 / myNum);
 
 
 			/*-------------------------------------
 			| Functions
 			-------------------------------------*/
+			//function declaration
+			function addMeUp(myNum) {
+				console.log(1 + myNum);
+				console.log(10 * myNum);
+			}
+			//function call
+			addMeUp(10);
+			addMeUp(20);
+			addMeUp(100);
+
+
+			window.onload = function() {
+
+				var theH1 = document.querySelectorAll('h1');
+				theH1[0].addEventListener('click', function() {
+					console.log('you hit me');
+				});
+			}
 
 
 			/*-------------------------------------
 			| Conditions
 			-------------------------------------*/
+
+			var weather = 'rain';
+
+			if (weather === 'rain')
+			{
+				console.log('Bring your umbrella');
+			}
+			else if (weather === 'sunny')
+			{
+				console.log('Bring your umbrella');
+			}
+			else {
+				console.log('Above was not true');
+			}
+
 
 		</script>
 	</head>
