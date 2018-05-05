@@ -53,17 +53,72 @@
 			/*-------------------------------------
 			| Review
 			-------------------------------------*/
+			// single line comments
+			/*
+			multiple lines comments
+			more than one
+			*/
+			// comments for debugging and troubleshooting
 
+			var container1 = "I went to the park";
+			var container2 = "I can't do this";
+			var container3 = 'I can\'t go there'; // escape it
+			// variables can contain data, objects
+			// strings
+			console.log(container1 + ' AND ' + container2);
+			console.log(200 + 300);
+			console.log('200' + 300);
 
+			// semi-colons ending
 			/*-------------------------------------
-			| Conditions
+			| Conditions: do this over that
 			-------------------------------------*/
 
+			var weather = 'sunny'
+			if (weather == 'sunny')
+			{
+				console.log('bring your sunscreen');
+			}
+			else {
+				{
+					console.log('bring your umbrella');
+				}
+			}
 
 			/*-------------------------------------
-			| Toggle Element Examples
+			| Toggle Element Examples toggle: between two different states
 			-------------------------------------*/
+			// 0. Grab some toys
+			var button = document.querySelector('button.product');
+			var departureDetails = document.querySelector('div.departure-details');
+			var showHideText = document.querySelector('button.product span')
 
+			console.log('Button', button);
+			console.log('Show hide text', showHideText);
+			console.log('Depart Details', departureDetails);
+
+			// 1. hide the departure-details
+			departureDetails.style.display == 'none';
+
+			// 2. when user clicks on button
+			button.addEventListener('click', function(){
+				if (departureDetails.style.display == 'none')
+				{
+					console.log('Do A');
+					// a. show departure-details
+						departureDetails.style.display = 'block';
+					// a.1 change name to 'hide'
+						showHideText.innerHTML = 'Hide'
+				}
+				else
+				{
+					console.log('Do B');
+					// b. hide departure-details
+						departureDetails.style.display = 'none';
+					 // b.1 change name to 'show'
+					 showHideText.innerHTML = 'Show'
+				} // here ends our if statement
+			}); // here ends an addEventListener
 
 		</script>
 
