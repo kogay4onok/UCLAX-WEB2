@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Remote Swap</title>
+		<link rel="stylesheet" href="./css/styles.css">
+		<style>
+			.remote {
+				border: solid teal 10px;
+				width: 960px;
+				height: 320px;
+				margin: 25px auto;
+				background-color: white;
+
+				position: relative;
+				justify-content: center;
+			}
+			/*Thumbnails on the right or left*/
+			.remote .thumbs {
+				display: flex;
+				flex-wrap: wrap;
+				width: 320px;
+				height: 320px;
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				/* font-size: 0px; // is there another way to remove space between img? */
+			}
+			/*Large opposite of the thumbnails (e.g. right or left)*/
+			.remote .large {
+				position: absolute;
+				right: 0px;
+				top: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Remote Swap</h1>
+
+		<div class="remote">
+			<div class="thumbs">
+				<!-- Thumbnails Go Here -->
+				<img src="./img/small/bear1_80x80.png">
+				<img src="./img/small/bear2_80x80.png">
+				<img src="./img/small/bear3_80x80.png">
+				<img src="./img/small/bear4_80x80.png">
+				<img src="./img/small/bear5_80x80.png">
+				<img src="./img/small/bear6_80x80.png">
+				<img src="./img/small/bear7_80x80.png">
+				<img src="./img/small/bear8_80x80.png">
+				<img src="./img/small/bear9_80x80.png">
+				<img src="./img/small/bear10_80x80.png">
+				<img src="./img/small/bear11_80x80.png">
+				<img src="./img/small/bear12_80x80.png">
+				<img src="./img/small/bear13_80x80.png">
+				<img src="./img/small/bear14_80x80.png">
+				<img src="./img/small/bear15_80x80.png">
+				<img src="./img/small/bear16_80x80.png">
+			</div>
+
+			<div class="large">
+				<!-- Large Goes Here -->
+				<img src="./img/large/bear1_640x320.png" class="large">
+			</div>
+
+		</div>
+
+		<script>
+
+			var largeBear = document.querySelectorAll('img.large');
+			var thumbs = document.querySelectorAll('.thumbs img');
+
+			console.log('Large', largeBear[0]);
+			console.log('Thumbnails', thumbs);
+			console.log('Thumb 1', thumbs[0]);
+
+			thumbs[0].addEventListener('mouseover', function() {
+				console.log('over');
+				largeBear[0].src="./img/large/bear1_640x320.png";
+			});
+
+			thumbs[1].addEventListener('mouseover', function() {
+				console.log('over');
+				largeBear[0].src="./img/large/bear2_640x320.png";
+			});
+
+			thumbs[2].addEventListener('mouseover', function() {
+				console.log('over');
+				largeBear[0].src="./img/large/bear3_640x320.png";
+			});
+
+			thumbs[3].addEventListener('mouseover', function() {
+				console.log('over');
+				largeBear[0].src="./img/large/bear4_640x320.png";
+			});
+
+			thumbs[4].addEventListener('mouseover', function() {
+				largeBear[0].src="./img/large/bear5_640x320.png";
+			});
+
+			thumbs[5].addEventListener('mouseover', function() {
+				largeBear[0].src="./img/large/bear6_640x320.png";
+			});
+
+			thumbs[6].addEventListener('mouseover', function() {
+				largeBear[0].src="./img/large/bear7_640x320.png";
+			});
+
+			thumbs[7].addEventListener('mouseover', function() {
+				largeBear[0].src="./img/large/bear8_640x320.png";
+			});
+
+			thumbs[8].addEventListener('mouseover', function() {
+				largeBear[0].src="./img/large/bear9_640x320.png";
+			});
+
+			thumbs[9].addEventListener('mouseover', function() {
+				largeBear[0].src="./img/large/bear10_640x320.png";
+			});
+
+			thumbs[10].addEventListener('mouseover', function() {
+				largeBear[0].src="./img/large/bear11_640x320.png";
+			});
+
+			thumbs[11].addEventListener('mouseover', function() {
+				largeBear[0].src="./img/large/bear12_640x320.png";
+			});
+
+			thumbs[12].addEventListener('mouseover', function() {
+				largeBear[0].src="./img/large/bear13_640x320.png";
+			});
+
+			thumbs[13].addEventListener('mouseover', function() {
+				largeBear[0].src="./img/large/bear14_640x320.png";
+			});
+
+			thumbs[14].addEventListener('mouseover', function() {
+				largeBear[0].src="./img/large/bear15_640x320.png";
+			});
+
+			thumbs[15].addEventListener('mouseover', function() {
+				largeBear[0].src="./img/large/bear16_640x320.png";
+			});
+
+
+
+
+			// Your script goes here.
+		</script>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+#stage {
+  border: 1px solid gray;
+  width: 960px;
+  height: 600px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.set {
+  text-align: center;
+}
+
+.set .emoji {
+  margin-top: 600px;
+  transition: all 1s;
+}
+
+.set.on .emoji {
+  margin-top: 0;
+  transition: all .5s;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 200px;
+  height: auto;
+}

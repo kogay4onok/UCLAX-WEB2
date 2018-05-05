@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>El Switcharoo</title>
+		<link rel="stylesheet" href="./css/styles.css">
+	</head>
+	<body>
+
+		<h1>El Switcharoo</h1>
+
+		<div id="stage">
+			<div class="set set1">
+				<!-- Set 1 Object and Switch Images Go Here -->
+				<img class="toggle" src="img/toggle_off.png" data-on="img/toggle_on.png" data-off="img/toggle_off.png">
+				<img class="emoji" src="img/emoji_silly.jpg" data-on="img/emoji_smart.jpg" data-off="img/emoji_silly.jpg">
+			</div>
+			<div class="set set2">
+				<!-- Set 2 Object and Switch Images Go Here -->
+				<img class="toggle" src="img/toggle_off.png" data-on="img/toggle_on.png" data-off="img/toggle_off.png">
+				<img class="emoji" src="img/emoji_crying.png" data-on="img/emoji_happy.png" data-off="img/emoji_crying.png">
+			</div>
+			<div class="set set3">
+				<!-- Set 3 Object and Switch Images Go Here -->
+				<img class="toggle" src="img/toggle_off.png" data-on="img/toggle_on.png" data-off="img/toggle_off.png">
+				<img class="emoji" src="img/emoji_angry.jpg" data-on="img/emoji_unhappy.jpg" data-off="img/emoji_angry.jpg">
+			</div>
+		</div>
+
+		<script>
+
+		window.onload = function() {
+
+			function switchOnOff() {
+				var toggleEl = this;
+				var setEl = toggleEl.parentElement;
+				var emojiEl = toggleEl.nextElementSibling;
+				if (setEl.classList.contains('on')) {
+					setEl.classList.remove('on');
+					toggleEl.src = toggleEl.dataset.off;
+					emojiEl.src = emojiEl.dataset.off;
+				} else {
+					setEl.classList.add('on');
+					toggleEl.src = toggleEl.dataset.on;
+					emojiEl.src = emojiEl.dataset.on;
+				}
+			}
+
+			var toggles = document.querySelectorAll('#stage .toggle');
+
+			toggles[0].addEventListener('click', switchOnOff);
+			toggles[1].addEventListener('click', switchOnOff);
+			toggles[2].addEventListener('click', switchOnOff);
+
+		};
+		</script>
+
+	</body>
+</html>
