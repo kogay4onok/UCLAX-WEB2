@@ -11,9 +11,9 @@ function switchSection(whichSection) {
   console.log(whichSection);
 
 // hide them all
-for(var i = 0; i < theSections.length; i++) {
-  theSections[i].style.display = 'none';
-}
+  for(var i = 0; i < theSections.length; i++) {
+    theSections[i].style.display = 'none';
+  }
 
   // show the chosen one
   theSections[whichSection].style.display = 'block';
